@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rosa April Yani - Portofolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header dan Navigasi -->
+  <header>
+    <div class="container">
+      
+      <nav aria-label="Navigasi Utama">
+        <div class="logo" tabindex="0">MyPortofolio</div>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="about-me" aria-label="Tentang Saya">
+    <h1>Hallo(●'◡'●), saya <strong>Rosa April Yani</strong></h1>
+    <img src="img.jpg" alt="foto rosa april yani" class="profil-foto">
+    <p>😘Selamat datang di situs portofolio pribadi saya! Saya adalah seorang <strong>pelajar di SMK Plus Pelita Nusantara</strong> yang senang membuat aplikasi web menggunakan <strong>HTML, CSS, dan JavaScript</strong>.</p>
+    <p>Saya percaya bahwa teknologi🪧adalah alat penting untuk membangun masa depan pendidikan📒yang lebih baik.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" aria-label="Skill Section">
+    <h2>Skills💡</h2>
+    <div class="skill-list" role="list">
+      <span class="skill" role="listitem">HTML5(❁´◡`❁)</span>
+      <span class="skill" role="listitem">CSS(*/ω＼*)</span>
+      <span class="skill" role="listitem">JavaScript</span>
+      <span class="skill" role="listitem">Responsive Design</span>
+      <span class="skill" role="listitem">Git & GitHub</span>
+      
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" aria-label="Projects Section">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <article class="project-item" tabindex="0">
+        <h3>Portofolio U_U</h3>
+        <p>Website pribadi saya yang menampilkan profil, keterampilan, dan proyek. Dibangun menggunakan HTML, CSS, JavaScript.</p>
+        <a href="portofolio2/index.html" class="project-link" target="_blank" rel="noopener">Lihat Project</a>
+      </article>
+
+      <article class="project-item" tabindex="0">
+        <h3>jam digital</h3>
+        <p>jam digital yang menampilkan waktu real-time yang menggunakan js</p>
+        <a href="jam digital/index.html" class="project-link" target="_blank" rel="noopener">Lihat Project</a>
+      </article>
+
+      <article class="project-item" tabindex="0">
+        <h3>Quiz Game</h3>
+        <p>Game quiz sederhana dengan pertanyaan pilihan ganda dan sistem penilaian. Dibuat dengan JavaScript.</p>
+        <a href="Quiz sederhana/index.html" class="project-link" target="_blank" rel="noopener">Lihat Quiz</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" aria-label="Contact Section">
+    <h2>Contact Me</h2>
+    <form id="contact-form" novalidate>
+      <label for="name">Nama Lengkap</label>
+      <input type="text" id="name" name="name" placeholder="Nama Anda" aria-label="Nama Anda" required />
+      <div class="error" id="name-error"></div>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Email" aria-label="Email" required />
+      <div class="error" id="email-error"></div>
+
+      <label for="message">Pesan</label>
+      <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda..." aria-label="Pesan Anda" required></textarea>
+      <div class="error" id="message-error"></div>
+
+      <button type="submit" aria-label="Kirim Pesan">Kirim Pesan</button>
+      <p class="success-msg" id="success-message" aria-live="polite"></p>
+    </form>
+  </section>
+<script src="script.js"></script>
+<section id="qr">
+  <h2>scan untuk ke github saya</h2>
+  <img src="frame (2).png" alt="qr code github" width="200">
+</section>
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Rosa April Yani
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

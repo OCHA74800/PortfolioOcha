@@ -1,0 +1,51 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f3bad6, #f05ed7, #75256b);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #clock {
+    background-color: rgba(109, 25, 112, 0.89); /* pink soft background */
+    padding: 30px 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(182, 17, 86, 0.911); /* pink shadow */
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    border: 2px solid pink;
+  }
+  
+  #clock h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: pink;
+  }
+  
+  #time {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 2em;
+  }
+  
+  #time div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: pulse 2s infinite;
+    color: pink;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }

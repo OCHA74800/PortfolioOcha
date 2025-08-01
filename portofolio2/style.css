@@ -1,0 +1,153 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f0f7; /* Soft pinkish background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #ff66b2; /* Pink background for the header */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd1dc; /* Light pink on hover */
+}
+
+/* About Section */
+#about {
+    padding: 40px 0;
+    background-color: #ffe6f2; /* Light pink for about section */
+}
+
+#about h2 {
+    font-size: 2rem;
+    color: #ff66b2;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Projects Section */
+#projects {
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+#projects h2 {
+    font-size: 2rem;
+    color: #ff66b2;
+    margin-bottom: 20px;
+}
+
+.project-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.project {
+    background-color: #ffe6f2; /* Light pink background for project cards */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    color: #ff66b2;
+}
+
+.project p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Contact Section */
+#contact {
+    padding: 40px 0;
+    background-color: #ffe6f2;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: #ff66b2;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+#contact a {
+    color: #ff66b2;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #ffd1dc;
+}
+
+/* Footer */
+footer {
+    background-color: #ff66b2;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+footer p {
+    margin-top: 10px;
+}
