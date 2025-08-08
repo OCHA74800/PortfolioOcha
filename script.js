@@ -41,4 +41,3 @@ if (valid) {
     succesMsg.textContent = 'Thank you! Your message has been sent.';
     from. reset();
 }
-
