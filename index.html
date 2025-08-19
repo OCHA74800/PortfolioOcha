@@ -5,37 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rosa April Yani - Portofolio</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome untuk ikon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
   <!-- Header dan Navigasi -->
   <header>
-  <div class="container">
-    <nav aria-label="Navigasi Utama">
-      <div class="logo" tabindex="0">MyPortofolio</div>
-
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
+    <div class="container">
+      <nav aria-label="Navigasi Utama">
+        <div class="logo" tabindex="0">MyPortofolio</div>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <!-- About -->
   <section id="about" class="about-me" aria-label="Tentang Saya">
     <div class="about-container">
+      <div class="about-image-top">
+        <img src="img.jpg" alt="foto rosa april yani" class="profil-foto" />
+      </div>
+
       <div class="about-text">
-        <h1 class="typing-text">Hallo(●'◡'●), saya <strong>Rosa April Yani</strong></h1>
+        <h1 class="animasi-text">Hallo(●'◡'●), saya <strong>Rosa April Yani</strong></h1>
         <p>😘Selamat datang di situs portofolio pribadi saya! Saya adalah seorang <strong>pelajar di SMK Plus Pelita Nusantara</strong> yang senang membuat aplikasi web menggunakan <strong>HTML, CSS, dan JavaScript</strong>.</p>
         <p>Saya percaya bahwa teknologi🪧adalah alat penting untuk membangun masa depan pendidikan📒yang lebih baik.</p>
-      </div>
-      <div class="about-img">
-        <img src="img.jpg" alt="foto rosa april yani" class="profil-foto">
-        <img src="frame (3).png" alt="QR Code" class="barcode-foto" />
       </div>
     </div>
   </section>
@@ -44,11 +45,11 @@
   <section id="skills" aria-label="Skill Section">
     <h2>Skills💡</h2>
     <div class="skill-list" role="list">
-      <span class="skill" role="listitem">HTML5(❁´◡`❁)</span>
-      <span class="skill" role="listitem">CSS(*/ω＼*)</span>
-      <span class="skill" role="listitem">JavaScript</span>
-      <span class="skill" role="listitem">Responsive Design</span>
-      <span class="skill" role="listitem">Git & GitHub</span>
+      <span class="skill" role="listitem">HTML5</span>
+      <span class="skill" role="listitem">CSS</span>
+      <span class="skill" role="listitem">Coreldraw</span>
+      <span class="skill" role="listitem">Figma</span>
+      <span class="skill" role="listitem">Microsoft Office</span>
     </div>
   </section>
 
@@ -97,8 +98,18 @@
 
   <!-- Footer -->
   <footer>
-    &copy; 2025 Rosa April Yani
+    <p>&copy; 2025 Rosa April Yani</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/och1a?igsh=MjhzeXBucnVwcGNv" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fab fa-instagram"></i> Instagram
+      </a> | 
+      <a href="https://wa.me/6285934912401" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+       
+    </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #f3bad6, #f05ed7, #75256b);
-    color: #ffffff;
+    background: linear-gradient(to right, #da528c, #f8b3d9, #e268a3);
+    color: #7b3a62;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,26 +10,29 @@ body {
   }
   
   #clock {
-    background-color: rgba(109, 25, 112, 0.89); /* pink soft background */
+    background-color: rgba(255, 182, 193, 0.25); /* pink pastel semi-transparent */
     padding: 30px 50px;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(182, 17, 86, 0.911); /* pink shadow */
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.6); /* pink glow */
     text-align: center;
     animation: fadeIn 2s ease-in-out;
-    border: 2px solid pink;
+    border: 2px solid rgba(197, 39, 63, 0.7);
+    backdrop-filter: blur(10px);
   }
   
   #clock h2 {
     margin-bottom: 20px;
-    font-size: 24px;
-    color: pink;
+    font-size: 26px;
+    color: #e00d54;
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(190, 33, 70, 0.6);
   }
   
   #time {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    font-size: 2em;
+    gap: 20px;
+    font-size: 2.5em;
   }
   
   #time div {
@@ -37,7 +40,13 @@ body {
     flex-direction: column;
     align-items: center;
     animation: pulse 2s infinite;
-    color: pink;
+    color: #c85c8e;
+    transition: color 0.3s ease;
+  }
+  
+  #time div:hover {
+    color: #d41f6e;
+    cursor: default;
   }
   
   @keyframes fadeIn {
@@ -47,5 +56,5 @@ body {
   
   @keyframes pulse {
     0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+    50% { transform: scale(1.07); }
   }

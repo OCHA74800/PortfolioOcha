@@ -7,8 +7,8 @@
 }
 
 body {
-  background-color: #fff0f5;
-  color: #333;
+  background-color: #8b1f43;
+  color: #037597;
   line-height: 1.6;
 }
 
@@ -50,27 +50,50 @@ nav ul li a {
   background: #ffeef2;
 }
 
+/* === MODIFIKASI: About container jadi kolom dan center === */
 .about-container {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
+  flex-direction: column;  /* kolom, foto di atas teks */
+  align-items: center;     /* center horizontal */
+  gap: 20px;               /* jarak antar elemen */
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;      /* teks rata tengah */
 }
 
-.about-text {
-  max-width: 600px;
+/* Foto profil dan barcode sekarang di atas teks */
+.about-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
   animation: fadeIn 1.5s ease-in-out;
 }
 
-.typing-text {
+.profil-foto {
+  width: 180px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(235, 139, 139, 0.3);
+  object-fit: cover;
+}
+
+.barcode-foto {
+  width: 100px;
+  height: auto;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animasi teks Hallo */
+.animasi-text {
   border-right: 3px solid pink;
   white-space: nowrap;
   overflow: hidden;
   width: 0;
   animation: typing 4s steps(40, end) forwards, blink 0.8s step-end infinite;
-  font-size: 28px;
+  font-size: 2.2rem;
   font-weight: bold;
-  color: #d6336c;
+  color: #e20955;
 }
 
 @keyframes typing {
@@ -82,11 +105,12 @@ nav ul li a {
   50% { border-color: transparent }
 }
 
-.about-img img {
-  max-width: 250px;
-  border-radius: 50%;
-  border: 4px solid #d6336c;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+/* Styling paragraf about */
+.about-text p {
+  color: #7b3a62;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  animation: fadeIn 2s ease-in-out;
 }
 
 /* Skills Section */
@@ -164,6 +188,16 @@ button:hover {
   background-color: #bf2051;
 }
 
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.success-msg {
+  color: green;
+  font-size: 14px;
+}
+
 /* Footer */
 footer {
   background-color: #ffb6c1;
@@ -173,38 +207,92 @@ footer {
   color: white;
 }
 
-/* Animasi */
+/* Animasi Fade In */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.about-container {
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #skills {
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  #skills h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+}
+
+/* nav styling tambahan */
+nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
+  justify-content: space-around;
+  background-color: #f8bbd0;
+  padding: 10px 20px;
 }
 
-.about-text {
-  flex: 1 1 60%;
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  font-weight: 500;
 }
 
-.about-image {
-  flex: 1 1 35%;
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav a {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+}
+.social-links {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
 
-.profil-foto {
-  width: 180px;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+.social-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
 }
 
-.barcode-foto {
-  margin-top: 1rem;
-  width: 100px;
-  height: auto;
+.social-links a i {
+  margin-right: 6px;
+  font-size: 18px;
 }
+
+.social-links a:hover {
+  color: #ffe6ee;
+}
+

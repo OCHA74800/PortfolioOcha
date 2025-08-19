@@ -1,43 +1,53 @@
-const from = document.getElementById('contact-from');
-const nameinput = from.namespaceURI;
-const emailinput = from.email;
-const messageinput = from.message;
-const succesMsg = document.getElementById('succes message');
+// Ambil elemen form dan input
+const form = document.getElementById('contact-form');
+const nameInput = form.name;
+const emailInput = form.email;
+const messageInput = form.message;
+const successMsg = document.getElementById('success-message');
 
-const nameError = document.getElementById('name-Error');
-const emailError = document.getElementById('email-Error');
-const messageError = document.getElementById('message-Error');
+// Ambil elemen error
+const nameError = document.getElementById('name-error');
+const emailError = document.getElementById('email-error');
+const messageError = document.getElementById('message-error');
 
+// Fungsi validasi email
 function validateEmail(email) {
-    // simple regex for email validation
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
-from.addEventListener('submit', function (e) {
+
+// Event submit form
+form.addEventListener('submit', function (e) {
     e.preventDefault();
-})
-nameError.textContent ='';
-emailError.textcontent='';
-messageError.textContent='';
-succesMsg.textContent='';
 
-let valid = true;
+    // Reset pesan error & sukses
+    nameError.textContent = '';
+    emailError.textContent = '';
+    messageError.textContent = '';
+    successMsg.textContent = '';
 
-if (nameinput.valueOf.trim() === '') {
-    nameError.textContent = 'please anter your name';
-    valid=false;
+    let valid = true;
 
-}
-if (!validataeEmail(emailinput.value.trim())) {
-    emailError.textContent = 'please enter a valid email addres.';
-    valid=false;
-}
-if (messageinput.value.trim() === '') {
-    messageError.textContent = 'please enter your message.';
-    valid=false;
-}
+    // Validasi nama
+    if (nameInput.value.trim() === '') {
+        nameError.textContent = 'Please enter your name.';
+        valid = false;
+    }
 
-if (valid) {
-    //simulite sanding message (no backend)
-    succesMsg.textContent = 'Thank you! Your message has been sent.';
-    from. reset();
-}
+    // Validasi email
+    if (!validateEmail(emailInput.value.trim())) {
+        emailError.textContent = 'Please enter a valid email address.';
+        valid = false;
+    }
+
+    // Validasi pesan
+    if (messageInput.value.trim() === '') {
+        messageError.textContent = 'Please enter your message.';
+        valid = false;
+    }
+
+    // Jika semua valid
+    if (valid) {
+        successMsg.textContent = 'Thank you! Your message has been sent.';
+        form.reset();
+    }
+});
