@@ -16,12 +16,17 @@
     <div class="container">
       <nav aria-label="Navigasi Utama">
         <div class="logo" tabindex="0">MyPortofolio</div>
-        <ul>
+        <ul class="nav-links">
           <li><a href="#about">About Me</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <!-- Tombol menu mobile -->
+        <div class="menu-toggle" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
       </nav>
     </div>
   </header>
@@ -106,10 +111,17 @@
       <a href="https://wa.me/6285934912401" target="_blank" rel="noopener" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i> WhatsApp
       </a>
-       
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Toggle menu untuk mobile
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>

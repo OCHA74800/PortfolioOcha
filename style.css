@@ -23,7 +23,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 20px;
 }
 
 .logo {
@@ -32,16 +32,24 @@ nav {
   color: #fff;
 }
 
-nav ul {
+.nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-nav ul li a {
+.nav-links li a {
   color: white;
   text-decoration: none;
   font-weight: 500;
+}
+
+/* Tombol menu mobile */
+.menu-toggle {
+  display: none;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
 }
 
 /* About Section */
@@ -50,25 +58,15 @@ nav ul li a {
   background: #ffeef2;
 }
 
-/* === MODIFIKASI: About container jadi kolom dan center === */
 .about-container {
-  display: flex;
-  flex-direction: column;  /* kolom, foto di atas teks */
-  align-items: center;     /* center horizontal */
-  gap: 20px;               /* jarak antar elemen */
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;      /* teks rata tengah */
-}
-
-/* Foto profil dan barcode sekarang di atas teks */
-.about-image {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
-  animation: fadeIn 1.5s ease-in-out;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
 }
 
 .profil-foto {
@@ -78,13 +76,6 @@ nav ul li a {
   object-fit: cover;
 }
 
-.barcode-foto {
-  width: 100px;
-  height: auto;
-  animation: fadeIn 2s ease-in-out;
-}
-
-/* Animasi teks Hallo */
 .animasi-text {
   border-right: 3px solid pink;
   white-space: nowrap;
@@ -105,12 +96,10 @@ nav ul li a {
   50% { border-color: transparent }
 }
 
-/* Styling paragraf about */
 .about-text p {
   color: #7b3a62;
   font-size: 1.15rem;
   line-height: 1.5;
-  animation: fadeIn 2s ease-in-out;
 }
 
 /* Skills Section */
@@ -143,11 +132,13 @@ nav ul li a {
 
 .project-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 .project-item {
+  flex: 1 1 280px;
   background: white;
   padding: 20px;
   border-left: 6px solid #d6336c;
@@ -207,76 +198,9 @@ footer {
   color: white;
 }
 
-/* Animasi Fade In */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Mobile Responsive */
-@media (max-width: 480px) {
-  header {
-    padding: 10px;
-    text-align: center;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav a {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  #skills {
-    padding: 20px 10px;
-    text-align: center;
-  }
-
-  #skills h2 {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-
-  .skill-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-  }
-}
-
-/* nav styling tambahan */
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  background-color: #f8bbd0;
-  padding: 10px 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 8px 12px;
-  font-weight: 500;
-}
-
-@media (max-width: 480px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-  nav a {
-    padding: 10px 0;
-    font-size: 14px;
-  }
-}
 .social-links {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 10px;
 }
@@ -296,3 +220,44 @@ nav a {
   color: #ffe6ee;
 }
 
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #ff9bb6;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    width: 180px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .animasi-text {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .skill {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .project-item {
+    flex: 1 1 100%;
+  }
+}
